@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidekick</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Sidekick</h1>
+        <button id="optionsBtn" class="options-btn" title="Settings">⚙️</button>
+      </div>
+
+      <div class="system-prompt-section">
+        <label for="systemPromptSelect">System Prompt:</label>
+        <select id="systemPromptSelect">
+          <option value="">Select a system prompt...</option>
+          <option value="default">Default Assistant</option>
+          <option value="coding">Coding Assistant</option>
+          <option value="creative">Creative Writer</option>
+          <option value="professional">Professional Helper</option>
+        </select>
+      </div>
+
+      <div class="chat-container">
+        <div id="chatMessages" class="chat-messages">
+          <div class="welcome-message">
+            <p>👋 Welcome! Select a system prompt and ask me anything.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-section">
+        <div class="input-container">
+          <textarea
+            id="userInput"
+            placeholder="Type your message here..."
+            rows="3"
+            maxlength="2000"
+          ></textarea>
+          <div class="input-actions">
+            <button id="sendBtn" class="send-btn" disabled>
+              <span class="send-icon">➤</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="status-bar">
+        <span id="statusText">Ready</span>
+        <div class="api-status">
+          <span id="apiStatus" class="status-indicator"></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
